@@ -8,8 +8,12 @@
 </head>
 <body>
 <div class="container">
-    <h1>🌾 Recommended Crop:</h1>
-    <h2>{{ crop }}</h2>
+    <h1>🌾 Top 5 Recommended Crops:</h1>
+    <ul>
+        {% for crop, prob in results %}
+            <li>{{ crop }} - {{ prob }}% confidence</li>
+        {% endfor %}
+    </ul>
     <a href="/">Predict Again</a>
 </div>
 </body>
